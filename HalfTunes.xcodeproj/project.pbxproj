@@ -46,6 +46,9 @@
 		19425D241F9C14150036D755 /* HalfTunesFakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfTunesFakeTests.swift; sourceTree = "<group>"; };
 		19425D261F9C14150036D755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19425D301F9C23B20036D755 /* abbaData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = abbaData.json; path = HalfTunesFakeTests/abbaData.json; sourceTree = SOURCE_ROOT; };
+		19F59C4C1F9FF3820095F55D /* ConfigDemo.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ConfigDemo.xcconfig; sourceTree = "<group>"; };
+		19F59C4D1F9FF39F0095F55D /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		19F59C4E1F9FF3AF0095F55D /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		408976CE1DEBF79E00AAB652 /* DHURLSessionMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHURLSessionMock.swift; sourceTree = "<group>"; };
 		4708D0061DD0E0E100B57EFC /* Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
 		D9EF8FC11B53FD2100EFC4B6 /* HalfTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HalfTunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +106,16 @@
 			path = HalfTunesFakeTests;
 			sourceTree = "<group>";
 		};
+		19F59C4B1F9FF32B0095F55D /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				19F59C4C1F9FF3820095F55D /* ConfigDemo.xcconfig */,
+				19F59C4D1F9FF39F0095F55D /* Debug.xcconfig */,
+				19F59C4E1F9FF3AF0095F55D /* Release.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		D92117481B596DFE008DAD44 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +136,7 @@
 		D9EF8FB81B53FD2100EFC4B6 = {
 			isa = PBXGroup;
 			children = (
+				19F59C4B1F9FF32B0095F55D /* Config */,
 				D9EF8FC31B53FD2100EFC4B6 /* HalfTunes */,
 				19425D151F9BFBB40036D755 /* HalfTunesTests */,
 				19425D231F9C14150036D755 /* HalfTunesFakeTests */,
@@ -244,6 +258,7 @@
 					};
 					D9EF8FC01B53FD2100EFC4B6 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 2WA89PX7ZL;
 						LastSwiftMigration = 0810;
 					};
 				};
@@ -487,6 +502,7 @@
 		};
 		D9EF8FE01B53FD2100EFC4B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19F59C4C1F9FF3820095F55D /* ConfigDemo.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -504,7 +520,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: AMIT KISHNANI (U3FHN856KB)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -527,13 +543,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		D9EF8FE11B53FD2100EFC4B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19F59C4C1F9FF3820095F55D /* ConfigDemo.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -551,7 +567,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: AMIT KISHNANI (U3FHN856KB)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -566,7 +582,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -574,9 +589,11 @@
 		};
 		D9EF8FE31B53FD2100EFC4B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19F59C4D1F9FF39F0095F55D /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2WA89PX7ZL;
 				INFOPLIST_FILE = HalfTunes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.HalfTunes;
@@ -587,9 +604,12 @@
 		};
 		D9EF8FE41B53FD2100EFC4B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19F59C4D1F9FF39F0095F55D /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2WA89PX7ZL;
 				INFOPLIST_FILE = HalfTunes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.HalfTunes;
