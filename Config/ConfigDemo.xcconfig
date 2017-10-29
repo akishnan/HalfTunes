@@ -1,0 +1,9 @@
+//
+//  ConfigDemo.xcconfig
+//  HalfTunes
+//
+//  Created by AMIT KISHNANI on 10/24/17.
+//  Copyright © 2017 Ray Wenderlich. All rights reserved.
+//
+
+SDKROOT = iphoneos
