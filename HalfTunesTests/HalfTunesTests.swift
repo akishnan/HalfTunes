@@ -30,7 +30,7 @@ class HalfTunesTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
-        let url = URL(string: "https://itune.apple.com/search?media=music&entity=song&term=abba")
+        let url = URL(string: "https://itunes.apple.com/search?media=music&entity=song&term=abba")
         let promise = expectation(description: "Status code: 200")
 
         
@@ -54,7 +54,7 @@ class HalfTunesTests: XCTestCase {
 
     func testCallToiTunesCompletes() {
         // given
-        let url = URL(string: "https://itunes.apple.com/search?media=music&entity=song&term=abba")
+        let url = URL(string: "https://itune.apple.com/search?media=music&entity=song&term=abba")
         // 1
         let promise = expectation(description: "Completion handler invoked")
         var statusCode: Int?
