@@ -12,7 +12,7 @@ fi
   
 cd "$project_dir"
 
-xcodebuild test -project HalfTunes.xcodeproj/ -scheme HalfTunes -destination 'platform=iOS Simulator,name=iPhone X,OS=11.0.1'
+xcodebuild test -project $appname.xcodeproj/ -scheme $appname -destination 'platform=iOS Simulator,name=iPhone X,OS=11.0.1'
 # xcodebuild -project HalfTunes.xcodeproj/ -scheme HalfTunes -sdk iphoneos -configuration Release archive -archivePath $PWD/build/HalfTunes.xcarchive
 # xcodebuild -exportArchive -archivePath $PWD/build/HalfTunes.xcarchive  -exportOptionsPlist exportOptions.plist -exportPath $PWD/build  -allowProvisioningUpdates true
 # zip -r "$appname.archive.dSYM.zip" "$appname.archive.dSYMs.HalfTunes.app.dSYM"
