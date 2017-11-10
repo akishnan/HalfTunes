@@ -39,9 +39,8 @@ class HalfTunesUITests: XCTestCase {
         songNameOrArtistSearchField.typeText("Lata Mangeshkar")
         app.typeText("\r")
         
-        exp.fulfill()
         waitForExpectations(timeout: 5, handler: nil)
         
-        XCTAssertEqual(app.tables.cells.count, 50, "No of songs found not equal to 50")
+        XCTAssertEqual(app.tables.cells.count, 35, "No of songs found not equal to 50")
     }
 }
