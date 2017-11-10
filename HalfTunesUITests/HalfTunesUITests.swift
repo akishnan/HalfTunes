@@ -41,6 +41,6 @@ class HalfTunesUITests: XCTestCase {
         //introduce a delay for network i/o
         sleep(2);
         
-        XCTAssertEqual(app.tables.cells.count, 35, "No of songs found not equal to 50")
+        XCTAssertEqual(app.tables.cells.count, 50, "No of songs found not equal to 50")
     }
 }
