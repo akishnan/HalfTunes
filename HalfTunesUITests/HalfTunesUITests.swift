@@ -32,14 +32,14 @@ class HalfTunesUITests: XCTestCase {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let app = XCUIApplication()
-        let exp = expectation(description: "\(#function)\(#line)")
         
         let songNameOrArtistSearchField = app.searchFields["Song name or artist"]
         songNameOrArtistSearchField.tap()
         songNameOrArtistSearchField.typeText("Lata Mangeshkar")
         app.typeText("\r")
         
-        waitForExpectations(timeout: 5, handler: nil)
+        //introduce a sleep for network i/o
+        //sleep(2);
         
         XCTAssertEqual(app.tables.cells.count, 35, "No of songs found not equal to 50")
     }
