@@ -38,9 +38,19 @@ class HalfTunesUITests: XCTestCase {
         songNameOrArtistSearchField.typeText("Lata Mangeshkar")
         app.typeText("\r")
         
-        //introduce a delay for network i/o
-        sleep(2);
-        
+        //introduce a delay for network I/O
+        sleep(3);
+
         XCTAssertEqual(app.tables.cells.count, 50, "No of songs found not equal to 50")
+
+        //capture the screenshot
+        XCTContext.runActivity(named: "Gather screenshots") { activity in
+            //capture the entire screen.
+            let mainScreen = XCUIScreen.main
+            let fullScreenshot = mainScreen.screenshot()
+            let fullScreenshotAttachment = XCTAttachment(screenshot: fullScreenshot)
+            fullScreenshotAttachment.lifetime = .keepAlways
+            activity.add(fullScreenshotAttachment)
+        }        
     }
 }
