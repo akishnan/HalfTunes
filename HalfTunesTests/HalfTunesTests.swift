@@ -54,7 +54,7 @@ class HalfTunesTests: XCTestCase {
 
     func testCallToiTunesCompletes() {
         // given
-        let url = URL(string: "https://itunes.apple.com/search?media=music&entity=song&term=abba")
+        let url = URL(string: "https://itun.apple.com/search?media=music&entity=song&term=abba")
         // 1
         let promise = expectation(description: "Completion handler invoked")
         var statusCode: Int?
@@ -64,6 +64,7 @@ class HalfTunesTests: XCTestCase {
         let dataTask = sessionUnderTest.dataTask(with: url!) { data, response, error in
             statusCode = (response as? HTTPURLResponse)?.statusCode
             responseError = error
+            print(responseError as Any)
             // 2
             promise.fulfill()
         }
