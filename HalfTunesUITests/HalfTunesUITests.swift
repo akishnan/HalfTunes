@@ -43,7 +43,7 @@ class HalfTunesUITests: XCTestCase {
 
         XCTAssertEqual(app.tables.cells.count, 35, "No of songs found not equal to 50")
 
-        //capture the screenshot
+        //capture the screenshots
         XCTContext.runActivity(named: "Gather screenshots") { activity in
             //capture the entire screen.
             let mainScreen = XCUIScreen.main
@@ -51,6 +51,12 @@ class HalfTunesUITests: XCTestCase {
             let fullScreenshotAttachment = XCTAttachment(screenshot: fullScreenshot)
             fullScreenshotAttachment.lifetime = .keepAlways
             activity.add(fullScreenshotAttachment)
+            
+            let cell = app.tables.cells.element(boundBy: 0)
+            let firstCellScreenshot = cell.screenshot()
+            let firstCellAttachment = XCTAttachment(screenshot: firstCellScreenshot)
+            firstCellAttachment.lifetime = .keepAlways
+            activity.add(firstCellAttachment)
         }        
     }
 }
