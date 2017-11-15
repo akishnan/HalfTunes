@@ -41,7 +41,7 @@ class HalfTunesUITests: XCTestCase {
         //introduce a delay for network I/O
         sleep(3);
 
-        XCTAssertEqual(app.tables.cells.count, 35, "No of songs found not equal to 50")
+        XCTAssertEqual(app.tables.cells.count, 50, "No of songs found not equal to 50")
 
         //capture the screenshots
         XCTContext.runActivity(named: "Gather screenshots") { activity in
